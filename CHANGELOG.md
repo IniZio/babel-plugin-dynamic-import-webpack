@@ -1,3 +1,8 @@
+## v1.1.3
+
+- [patch] Fallback to prev behaviour in case
+
+
 ## v1.1.2
 
 - [patch] Import default to behave same as babel
