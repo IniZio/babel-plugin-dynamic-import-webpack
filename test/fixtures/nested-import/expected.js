@@ -1,7 +1,7 @@
 function getModule(path) {
   return new Promise(resolve => {
-    require.ensure([], require => {
-      resolve(require('test-module'));
+    require.ensure([], function __import() {
+      resolve(require('test-module').default);
     });
   });
 }

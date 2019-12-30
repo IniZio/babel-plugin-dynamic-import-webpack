@@ -1,23 +1,23 @@
 new Promise(resolve => {
-  require.ensure([], require => {
-    resolve(require('test-module'));
+  require.ensure([], function __import() {
+    resolve(require('test-module').default);
   });
 }).then(() => new Promise(resolve => {
-  require.ensure([], require => {
-    resolve(require('test-module-2'));
+  require.ensure([], function __import() {
+    resolve(require('test-module-2').default);
   });
 }));
 
 Promise.all([new Promise(resolve => {
-  require.ensure([], require => {
-    resolve(require('test-1'));
+  require.ensure([], function __import() {
+    resolve(require('test-1').default);
   });
 }), new Promise(resolve => {
-  require.ensure([], require => {
-    resolve(require('test-2'));
+  require.ensure([], function __import() {
+    resolve(require('test-2').default);
   });
 }), new Promise(resolve => {
-  require.ensure([], require => {
-    resolve(require('test-3'));
+  require.ensure([], function __import() {
+    resolve(require('test-3').default);
   });
 })]).then(() => {});

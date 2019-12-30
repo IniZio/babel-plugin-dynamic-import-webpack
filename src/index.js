@@ -1,8 +1,8 @@
 export default ({ template }) => {
   const buildImport = template(`
   (new Promise((resolve) => {
-    require.ensure([], (require) => {
-      resolve(require(SOURCE));
+    require.ensure([], function __import() {
+      resolve(require(SOURCE).default);
     });
   }))
 `);

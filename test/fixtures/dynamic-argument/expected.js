@@ -1,12 +1,12 @@
 const MODULE = 'test-module';
 
 new Promise(resolve => {
-  require.ensure([], require => {
-    resolve(require(MODULE));
+  require.ensure([], function __import() {
+    resolve(require(MODULE).default);
   });
 });
 new Promise(resolve => {
-  require.ensure([], require => {
-    resolve(require(`test-${MODULE}`));
+  require.ensure([], function __import() {
+    resolve(require(`test-${MODULE}`).default);
   });
 });
