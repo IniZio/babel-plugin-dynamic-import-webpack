@@ -1,3 +1,7 @@
+## v1.1.2
+
+- [patch] Import default to behave same as babel
+
 ## v1.1.0
 
 - [New] Removes dependency on babel-template and babel-plugin-syntax-dynamic-import ([#51](https://github.com/airbnb/babel-plugin-dynamic-import-webpack/pull/51))
